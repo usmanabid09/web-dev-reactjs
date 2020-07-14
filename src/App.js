@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Welcome from "./welcome";
+import WelcomeFromClass from './welcomeclass';
+import SeprateComponent from './sepratecomponent';
 
 function App() {
+  // const amIProDeveloperNow = false;
+  const name = "Usman Abid";
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Welcome name={name}/>
+      <WelcomeFromClass 
+      name="Daniyal"
+      newElement={
+        <div>
+        <SeprateComponent/>
+        <p>Check mate</p>
+        </div>
+      }/>
     </div>
   );
 }
